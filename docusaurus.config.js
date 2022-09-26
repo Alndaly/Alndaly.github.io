@@ -74,8 +74,12 @@ const config = {
 			'classic',
 			/** @type {import('@docusaurus/preset-classic').Options} */
 			({
+				// googleAnalytics: {
+				// 	trackingID: 'UA-141789564-1',
+				// 	anonymizeIP: true,
+				// },
 				docs: {
-					remarkPlugins: [math, [require('mdx-mermaid'), {sync: true}]],
+					remarkPlugins: [math, [require('mdx-mermaid'), { sync: true }]],
 					rehypePlugins: [katex],
 					sidebarPath: require.resolve('./sidebars.js'),
 					// Please change this to your repo.
