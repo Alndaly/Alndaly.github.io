@@ -74,10 +74,10 @@ const config = {
 			'classic',
 			/** @type {import('@docusaurus/preset-classic').Options} */
 			({
-				// googleAnalytics: {
-				// 	trackingID: 'UA-141789564-1',
-				// 	anonymizeIP: true,
-				// },
+				googleAnalytics: {
+					trackingID: 'G-YREYFCFRSF',
+					anonymizeIP: false,
+				},
 				docs: {
 					remarkPlugins: [math, [require('mdx-mermaid'), { sync: true }]],
 					rehypePlugins: [katex],
