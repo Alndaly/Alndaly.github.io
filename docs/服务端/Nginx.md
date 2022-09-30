@@ -46,6 +46,8 @@ underscores_in_headers on; （默认 underscores_in_headers 为off）
 
 ## Nginx 中文路径乱码问题
 
+
+
 ```conf {5}
 server {
 	listen 80;
