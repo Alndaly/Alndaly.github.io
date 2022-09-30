@@ -44,6 +44,22 @@ underscores_in_headers on; （默认 underscores_in_headers 为off）
 
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20200716093635506.png)
 
+## Nginx 中文路径乱码问题
+
+```conf {5}
+server {
+	listen 80;
+	#listen [::]:80 default_server;
+
+	charset utf-8; 
+	# SSL configuration
+	#
+	listen 443 ssl;
+	#listen [::]:443 ssl default_server;
+
+}
+```
+
 ## Nginx转发
 
 
