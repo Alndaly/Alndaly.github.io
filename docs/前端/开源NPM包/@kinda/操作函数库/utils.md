@@ -1,5 +1,6 @@
 ---
-title: 自己编写的开源 @kinda/utils NPM包
+title: kindaUtils
+description: 自己编写的NPM包，集成了一些常见的操作需求。
 ---
 
 > github地址：https://github.com/Alndaly/kinda-utils.git
