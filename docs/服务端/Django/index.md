@@ -41,7 +41,7 @@ python manage.py createsuperuser
 
 ```python
 INSTALLED_APPS = [
-		'rest_framework', #增加这一行
+    'rest_framework', #增加这一行
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
