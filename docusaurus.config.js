@@ -8,6 +8,7 @@ const katex = require('rehype-katex');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
+	scripts: [],
 	stylesheets: [
 		{
 			href: 'https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap',
@@ -181,6 +182,11 @@ const config = {
 					{
 						to: '/docs/心理/',
 						label: '心理',
+						position: 'left',
+					},
+					{
+						to: '/docs/旅游/',
+						label: '旅游',
 						position: 'left',
 					},
 					{ to: '/blog', label: '博客', position: 'left' },
