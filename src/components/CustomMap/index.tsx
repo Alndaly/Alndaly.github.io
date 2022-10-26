@@ -1,9 +1,8 @@
 import { API_KEY } from '../../common/constant';
 import React, { useState, useEffect } from 'react';
 import { Map, APILoader, Marker } from '@uiw/react-amap';
+import BrowserOnly from "@docusaurus/BrowserOnly";
 import styles from './styles.module.css';
-import BrowserOnly from '@docusaurus/BrowserOnly';
-
 
 interface MapProps {
     latitude: number;
@@ -12,7 +11,7 @@ interface MapProps {
     address: string;
 }
 
-export default function MyMap(props: MapProps) {
+function CustomMap(props: MapProps) {
     const { latitude, longitude, address, zoom } = props;
     const [location, setLocation] = useState<any>()
 
@@ -21,12 +20,13 @@ export default function MyMap(props: MapProps) {
         setTimeout(() => {
             setLocation(new AMap.LngLat(latitude, longitude))
         }, 500);
-
-    }, [props]);
+    }, [])
 
     return (
-        <BrowserOnly fallback={<div></div>}>
+        <BrowserOnly fallback={<div>...</div>}>
             {() => {
+                const Component = require("@uiw/react-amap");
+                const { Map, APILoader, Marker } = Component;
                 return (
                     <div className={styles.myMapContainer}>
                         <APILoader akay={API_KEY}>
@@ -41,5 +41,7 @@ export default function MyMap(props: MapProps) {
                 )
             }}
         </BrowserOnly>
-    )
+    );
 }
+
+export default CustomMap;
