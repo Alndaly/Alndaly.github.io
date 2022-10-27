@@ -76,8 +76,14 @@ const config = {
 			/** @type {import('@docusaurus/preset-classic').Options} */
 			({
 				googleAnalytics: {
-					trackingID: 'G-YREYFCFRSF',
+					trackingID: '4106968968',
 					anonymizeIP: false,
+				},
+				sitemap: {
+					changefreq: 'weekly',
+					priority: 0.5,
+					ignorePatterns: ['/tags/**'],
+					filename: 'sitemap.xml',
 				},
 				docs: {
 					remarkPlugins: [math, [require('mdx-mermaid'), { sync: true }]],
