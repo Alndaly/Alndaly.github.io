@@ -17,7 +17,7 @@ Nginx联合创始人安德鲁·阿列克谢夫（Andrew Alexeev）曾说：Nginx
 -   这些优秀的设计带来的极大的稳定性。
 :::
 
-## 配置Nginx http自动跳转https
+## 配置`Nginx` `http`自动跳转`https`
 
 ```conf {3-5} title="nginx.conf"
 server{
@@ -64,14 +64,13 @@ server {
 
 ## Nginx转发
 
-
 ### 前言
 
-Location 是 Nginx 中一个非常核心的配置，这篇重点讲解一下 Location 的配置问题以及一些注意事项。
+`Location`是`Nginx`中一个非常核心的配置，这篇重点讲解一下`Location`的配置问题以及一些注意事项。
 
 ### 语法
 
-关于 Location，举个简单的配置例子：
+关于`Location`，举个简单的配置例子：
 
 ```conf
 http {
@@ -86,9 +85,9 @@ http {
 }
 ```
 
-大致的意思是，当你访问 `www.yayujs.com` 的 `80` 端口的时候，返回 `/home/www/ts/index.html` 文件。
+大致的意思是，当你访问`www.yayujs.com`的`80`端口的时候，返回`/home/www/ts/index.html`文件。
 
-我们看下 Location 的具体语法：
+我们看下`Location`的具体语法：
 
 ```conf
 location [ = | ~ | ~* | ^~ ] uri { ... }
@@ -96,7 +95,7 @@ location [ = | ~ | ~* | ^~ ] uri { ... }
 
 重点看方括号中的 `[ = | ~ | ~* | ^~ ]`，其中 `|` 分隔的内容表示你可能会用到的语法，其中：
 
--   `=` 表示精确匹配，比如：
+- `=`表示精确匹配，比如：
 
 ```conf
 location = /test {
@@ -109,7 +108,7 @@ location = /test {
 # /test/2 not ok
 ```
 
--   `~` 表示区分大小写的正则匹配，比如：
+- `~`表示区分大小写的正则匹配，比如：
 
 ```conf
 location ~ ^/test$ {
@@ -122,7 +121,7 @@ location ~ ^/test$ {
 # /test2 not ok
 ```
 
--   `~*` 表示不区分大小写的正则匹配
+- `~*`表示不区分大小写的正则匹配
 
 ```conf
 location ~* ^/test$ {
@@ -135,7 +134,7 @@ location ~* ^/test$ {
 # /test2 not ok
 ```
 
--   `^~` 表示 uri 以某个字符串开头
+- `^~`表示`uri`以某个字符串开头
 
 ```conf
 location ^~ /images/ {
@@ -145,9 +144,9 @@ location ^~ /images/ {
 # /images/1.gif ok
 ```
 
-而当你不使用这些语法的时候，只写 uri 的时候：
+而当你不使用这些语法的时候，只写`uri`的时候：
 
-`/` 表示通用匹配：
+`/`表示通用匹配：
 
 ```conf
 location / {
@@ -169,7 +168,7 @@ location /test {
 
 ### 匹配顺序
 
-当存在多个 location 的时候，他们的匹配顺序引用 [Nginx 官方文档](https://link.juejin.cn/?target=http%3A%2F%2Fnginx.org%2Fen%2Fdocs%2Fhttp%2Fngx_http_core_module.html%23location)就是：
+当存在多个`location`的时候，他们的匹配顺序引用 [Nginx 官方文档](https://link.juejin.cn/?target=http%3A%2F%2Fnginx.org%2Fen%2Fdocs%2Fhttp%2Fngx_http_core_module.html%23location)就是：
 
 > A location can either be defined by a prefix string, or by a regular expression. Regular expressions are specified with the preceding “~*” modifier (for case-insensitive matching), or the “~” modifier (for case-sensitive matching). To find location matching a given request, nginx first checks locations defined using the prefix strings (prefix locations). Among them, the location with the longest matching prefix is selected and remembered. Then regular expressions are checked, in the order of their appearance in the configuration file. The search of regular expressions terminates on the first match, and the corresponding configuration is used. If no match with a regular expression is found then the configuration of the prefix location remembered earlier is used.
 
@@ -179,24 +178,24 @@ location /test {
 
 翻译整理后就是：
 
-location 的定义分为两种：
+`location`的定义分为两种：
 
--   前缀字符串（prefix string）
--   正则表达式（regular expression），具体为前面带 `~*` 和 `~` 修饰符的
+- 前缀字符串（`prefix string`）
+- 正则表达式（`regular expression`），具体为前面带`~*`和`~`修饰符的
 
 而匹配 location 的顺序为：
 
-1.  检查使用前缀字符串的 locations，在使用前缀字符串的 locations 中选择最长匹配的，并将结果进行储存
-2.  如果符合带有 `=` 修饰符的 URI，则立刻停止匹配
-3.  如果符合带有 `^~` 修饰符的 URI，则也立刻停止匹配。
-4.  然后按照定义文件的顺序，检查正则表达式，匹配到就停止
-5.  当正则表达式匹配不到的时候，使用之前储存的前缀字符串
+1. 检查使用前缀字符串的`locations`，在使用前缀字符串的`locations`中选择最长匹配的，并将结果进行储存
+2. 如果符合带有`=`修饰符的URI，则立刻停止匹配
+3. 如果符合带有`^~`修饰符的URI，则也立刻停止匹配。
+4. 然后按照定义文件的顺序，检查正则表达式，匹配到就停止
+5. 当正则表达式匹配不到的时候，使用之前储存的前缀字符串
 
 再总结一下就是：
 
 在顺序上，前缀字符串顺序不重要，按照匹配长度来确定，正则表达式则按照定义顺序。
 
-在优先级上，`=` 修饰符最高，`^~` 次之，再者是正则，最后是前缀字符串匹配。
+在优先级上，`=`修饰符最高`^~`次之，再者是正则，最后是前缀字符串匹配。
 
 我们举几个简单的例子复习下：
 
@@ -226,7 +225,6 @@ server {
 
 # 请求 /document 使用 configuration A
 # 虽然 ~ ^/docu 也能匹配到，但正则表达式则按照定义顺序
-复制代码
 ```
 
 ```conf
@@ -255,12 +253,11 @@ server {
 
 # 请求 /document 使用 configuration B
 # 虽然 /document 也能匹配到，但正则的优先级更高
-复制代码
 ```
 
-### root 与 alias 的区别
+### `root`与`alias`的区别
 
-当我们这样设置 `root` 的时候：
+当我们这样设置`root`的时候：
 
 ```conf
 location /i/ {
@@ -268,9 +265,9 @@ location /i/ {
 }
 ```
 
-当请求 `/i/top.gif` ，`/data/w3/i/top.gif` 会被返回。
+当请求`/i/top.gif`，`/data/w3/i/top.gif`会被返回。
 
-当我们这样设置 `alias` 的时候：
+当我们这样设置`alias`的时候：
 
 ```conf
 location /i/ {
@@ -278,11 +275,11 @@ location /i/ {
 }
 ```
 
-当请求 `/i/top.gif` ，`/data/w3/images/top.gif` 会被返回。
+当请求`/i/top.gif`，`/data/w3/images/top.gif`会被返回。
 
-乍一看两者很像，但细一看，就能看出两者的区别，root 是直接拼接 `root` + `location` 而 alias 是用 `alias` 替换 `location`，所以 root 中最后的路径里有 `/i/`，而 alias 中最后的路径里没有  `/i/` 。
+乍一看两者很像，但细一看，就能看出两者的区别，`root`是直接拼接`root` + `location`而alias是用`alias`替换`location`，所以`root`中最后的路径里有`/i/`，而 alias 中最后的路径里没有`/i/` 。
 
-所以如果你这样使用 allias 定义一个路径：
+所以如果你这样使用`allias`定义一个路径：
 
 ```conf
 location /images/ {
@@ -290,7 +287,7 @@ location /images/ {
 }
 ```
 
-其实使用 root 会更好：
+其实使用`root`会更好：
 
 ```
 location /images/ {
@@ -298,9 +295,9 @@ location /images/ {
 }
 ```
 
-### server 和 location 中的 root
+### `server`和`location`中的`root`
 
-server 和 location 中都可以使用 root，举个例子：
+`server`和`location`中都可以使用`root`，举个例子：
 
 ```conf
 http {
@@ -318,7 +315,7 @@ http {
 
 如果两者都出现，是怎样的优先级呢？
 
-简单的来说，就是就近原则，如果 location 中能匹配到，就是用 location 中的 root 配置，忽略 server 中的 root，当 location 中匹配不到的时候，则使用 server 中的 root 配置。
+简单的来说，就是就近原则，如果`location`中能匹配到，就是用`location`中的`root`配置，忽略`server`中的`root`，当`location`中匹配不到的时候，则使用`server`中的`root`配置。
 
 
 ## **Nginx 基本概念**
@@ -353,7 +350,7 @@ http {
 
 如果请求数过大，单个服务器解决不了，我们增加服务器的数量，然后将请求分发到各个服务器上，将原先请求集中到单个服务器的情况改为请求分发到多个服务器上，就是负载均衡。
 
-Upstream 指定后端服务器地址列表，在 server 中拦截响应请求，并将请求转发到 Upstream 中配置的服务器列表。
+`Upstream`指定后端服务器地址列表，在`server`中拦截响应请求，并将请求转发到`Upstream`中配置的服务器列表。
 
 ```conf
 upstream balanceServer {    
@@ -412,21 +409,21 @@ nginx -V | xargs -n1 | grep lua
 
 Nginx是一款自由的、开源的、高性能的HTTP服务器和反向代理服务器；同时也是一个IMAP、POP3、SMTP代理服务器；Nginx可以作为一个HTTP服务器进行网站的发布处理，另外Nginx可以作为反向代理进行负载均衡的实现。在Nginx网站上，其功能包括：
 
--   HTTP和HTTPS（TLS / SSL / SNI）
--   超快速的Web服务器用于静态内容
--   FastCGI，WSGI，SCGI用于动态内容
--   具有负载平衡和缓存功能的加速Web代理
--   不间断实时二进制升级和配置
--   压缩和内容过滤器
--   虚拟主机
--   FLV和MP4的媒体流
--   带宽和连接策略
--   全面的访问控制
--   自定义日志
--   嵌入式脚本
--   带有TLS的SMTP / IMAP / POP3的邮件代理
--   逻辑，灵活，可扩展的配置
--   在Linux，FreeBSD，Mac OS X，Solaris和Windows上运行
+- HTTP和HTTPS（TLS / SSL / SNI）
+- 超快速的Web服务器用于静态内容
+- FastCGI，WSGI，SCGI用于动态内容
+- 具有负载平衡和缓存功能的加速Web代理
+- 不间断实时二进制升级和配置
+- 压缩和内容过滤器
+- 虚拟主机
+- FLV和MP4的媒体流
+- 带宽和连接策略
+- 全面的访问控制
+- 自定义日志
+- 嵌入式脚本
+- 带有TLS的SMTP / IMAP / POP3的邮件代理
+- 逻辑，灵活，可扩展的配置
+- 在Linux，FreeBSD，Mac OS X，Solaris和Windows上运行
 
 ## **Nginx有如下优势：**
 
@@ -442,8 +439,8 @@ Nginx是一款自由的、开源的、高性能的HTTP服务器和反向代理�
 
 ### 轻量级
 
--   功能模块少 - Nginx仅保留了HTTP需要的模块，其他都用插件的方式，后天添加
--   代码模块化 - 更适合二次开发，如阿里巴巴Tengine
+- 功能模块少 - Nginx仅保留了HTTP需要的模块，其他都用插件的方式，后天添加
+- 代码模块化 - 更适合二次开发，如阿里巴巴Tengine
 
 ### CPU亲和
 
@@ -464,7 +461,7 @@ events {
 }
 ```
 
-我们使用 nginx 的 http 服务，在配置文件 nginx.conf 中的 http 区域内，配置无数个 server ，每一个 server 对应这一个虚拟主机或者域名。
+我们使用`nginx`的`http`服务，在配置文件`nginx.conf`中的`http`区域内，配置无数个`server`，每一个`server`对应这一个虚拟主机或者域名。
 
 ```conf
 http {

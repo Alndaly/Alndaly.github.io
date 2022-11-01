@@ -228,7 +228,10 @@ const config = {
 				darkTheme: darkCodeTheme,
 			},
 		}),
-	plugins: ['@docusaurus/theme-live-codeblock', 'docusaurus-plugin-sass'],
+	plugins: [
+		'@docusaurus/theme-live-codeblock',
+		'docusaurus-plugin-sass',
+	],
 };
 
 module.exports = config;
