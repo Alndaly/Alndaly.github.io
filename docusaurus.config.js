@@ -8,14 +8,13 @@ const katex = require('rehype-katex');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-	scripts: [],
+	scripts: [
+		{
+			src: './js/click.js',
+			defer: true
+		}
+	],
 	stylesheets: [
-		{
-			href: 'https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap',
-		},
-		{
-			href: 'https://fonts.googleapis.com/icon?family=Material+Icons',
-		},
 		{
 			href: 'https://cdn.jsdelivr.net/npm/katex@0.13.24/dist/katex.min.css',
 			type: 'text/css',
