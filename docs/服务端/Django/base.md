@@ -76,7 +76,7 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
-		#中间件修改成如下
+    #中间件修改成如下
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'corsheaders.middleware.CorsMiddleware',
