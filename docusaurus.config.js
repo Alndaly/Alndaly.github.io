@@ -165,6 +165,11 @@ const config = {
 						position: 'left',
 					},
 					{
+						to: '/docs/金融/',
+						label: '金融',
+						position: 'left',
+					},
+					{
 						to: '/docs/服务端/',
 						label: '服务端',
 						position: 'left',
