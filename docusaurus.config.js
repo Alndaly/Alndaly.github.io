@@ -11,10 +11,19 @@ const config = {
 	scripts: [
 		{
 			src: './js/click.js',
-			defer: true
-		}
+			defer: true,
+		},
+		{
+			src: 'https://fastly.jsdelivr.net/gh/stevenjoezhang/live2d-widget@latest/autoload.js',
+			defer: true,
+		},
 	],
 	stylesheets: [
+		{
+			href: 'https://fastly.jsdelivr.net/npm/@fortawesome/fontawesome-free@6/css/all.min.css',
+			type: 'text/css',
+			crossorigin: 'anonymous',
+		},
 		{
 			href: 'https://cdn.jsdelivr.net/npm/katex@0.13.24/dist/katex.min.css',
 			type: 'text/css',
@@ -232,10 +241,7 @@ const config = {
 				darkTheme: darkCodeTheme,
 			},
 		}),
-	plugins: [
-		'@docusaurus/theme-live-codeblock',
-		'docusaurus-plugin-sass',
-	],
+	plugins: ['@docusaurus/theme-live-codeblock', 'docusaurus-plugin-sass'],
 };
 
 module.exports = config;

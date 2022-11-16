@@ -50,6 +50,7 @@
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-live": "^2.4.1",
+    "react-particles": "^2.5.3",
     "react-router": "^6.3.0",
     "react-router-config": "^5.1.1",
     "rehype-katex": "5",
@@ -57,6 +58,8 @@
     "sass": "^1.54.8",
     "slick-carousel": "^1.8.1",
     "styled-components": "^5.3.5",
+    "tsparticles": "^2.5.3",
+    "tsparticles-engine": "^2.5.2",
     "typed.js": "^2.0.12"
   },
   "devDependencies": {
