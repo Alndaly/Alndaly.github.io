@@ -5,6 +5,7 @@ import BackToTopButton from '@theme/BackToTopButton';
 import DocPageLayoutSidebar from '@theme/DocPage/Layout/Sidebar';
 import Particles from 'react-particles';
 import { loadFull } from 'tsparticles';
+import { tsParticles } from "tsparticles-engine";
 import DocPageLayoutMain from '@theme/DocPage/Layout/Main';
 import styles from './styles.module.css';
 export default function DocPageLayout({ children }) {
