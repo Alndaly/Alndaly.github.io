@@ -44,7 +44,6 @@ jobs:
         uses: easingthemes/ssh-deploy@v2.1.5
         env:
           SSH_PRIVATE_KEY: ${{ secrets.SERVER_SSH_KEY }}  #这个是阿里云的私钥
-          ARGS: "-avzr --delete"
           SOURCE: "./build/"
           REMOTE_HOST: ${{ secrets.REMOTE_HOST }}    #阿里云的 ip
           REMOTE_USER: ${{ secrets.REMOTE_USER }}    #阿里云用户
