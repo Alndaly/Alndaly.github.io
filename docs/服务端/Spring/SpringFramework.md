@@ -1,10 +1,14 @@
-## Spring
+---
+title: Spring Framework基础
+---
+
+## Spring简介
 
 :::note
 Spring 框架的核心特性就是可以用于开发任何Java程序，但是在JEE平台上构建web应用长须是需要扩展的。
 :::
 
-[Spring Projects](https://spring.io/projects)
+[Spring Projects官网](https://spring.io/projects)
 
 :::note
 Sprint Framework是所有框架的基础，所有的Spring框架均是建立在Spring Framework 的基础上的。
@@ -60,15 +64,16 @@ Sprint Framework是所有框架的基础，所有的Spring框架均是建立在S
 ctrl+h可以打开继承了当前类的类的面板
 
 ![截屏2022-11-13 12.25.29.png](https://upload.kinda.info/image/202211181720854.png)
-    
-    | 类型名 | 简介 |
-    | --- | --- |
-    | FileSystemXmlApplicationContext | 通过读取类路径下的XML配置文件创建IOC容器对象 |
-    | ClassPathXmlApplicationContext | 通过读取磁盘路径下的XML配置文件创建IOC容器对象 |
-    | ConfigurableApplicationContext | ApplicationContext的子接口，包含一些扩展方法，让ApplicationContext具有启动、关闭和刷新上下文的能力。 |
-    | WebApplicationContext | 专门为Web应用准备，基于Web环境创建IOC容器对象，并将对象引入存入ServletContext域中。 |
-
 :::
+
+| 类型名 | 简介 |
+| --- | --- |
+| FileSystemXmlApplicationContext | 通过读取类路径下的XML配置文件创建IOC容器对象 |
+| ClassPathXmlApplicationContext | 通过读取磁盘路径下的XML配置文件创建IOC容器对象 |
+| ConfigurableApplicationContext | ApplicationContext的子接口，包含一些扩展方法，让ApplicationContext具有启动、关闭和刷新上下文的能力。 |
+| WebApplicationContext | 专门为Web应用准备，基于Web环境创建IOC容器对象，并将对象引入存入ServletContext域中。 |
+
+
     
 
 ### 快速开始
@@ -635,7 +640,7 @@ public class UserController {
 <context:component-scan base-package="com.atguigu.spring"></context:component-scan>
 ```
 
-******************排除扫描******************
+**排除扫描**
 
 ```xml
 <!-- 组件扫描配置 -->
