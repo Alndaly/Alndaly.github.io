@@ -14,9 +14,16 @@ const config = {
 			defer: true,
 		},
 		{
+			src: './js/google.js',
+		},
+		{
 			src: 'https://fastly.jsdelivr.net/gh/stevenjoezhang/live2d-widget@latest/autoload.js',
 			defer: true,
 		},
+		{
+			src: 'https://www.googletagmanager.com/gtag/js?id=G-YREYFCFRSF',
+			async: true
+		}
 	],
 	stylesheets: [
 		{
@@ -83,10 +90,6 @@ const config = {
 			'classic',
 			/** @type {import('@docusaurus/preset-classic').Options} */
 			({
-				googleAnalytics: {
-					trackingID: '4106968968',
-					anonymizeIP: false,
-				},
 				sitemap: {
 					changefreq: 'weekly',
 					priority: 0.5,
