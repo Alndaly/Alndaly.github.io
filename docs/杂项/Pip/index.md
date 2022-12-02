@@ -30,7 +30,7 @@ pip config list
 可以在使用pip的时候在后面加上-i参数，指定pip源
 
 ```
-pip install scrapy -i <https://pypi.tuna.tsinghua.edu.cn/simple>
+pip install scrapy -i https://pypi.tuna.tsinghua.edu.cn/simple
 ```
 
 ### 永久修改：
@@ -39,14 +39,14 @@ pip install scrapy -i <https://pypi.tuna.tsinghua.edu.cn/simple>
 
 ```
 [global]
-index-url = <https://pypi.tuna.tsinghua.edu.cn/simple>
+index-url = https://pypi.tuna.tsinghua.edu.cn/simple
 ```
 
 **windows** 直接在`user`目录中创建一个`pip`目录，如：`C:\\Users\\xx\\pip`，新建文件`pip.ini`，内容如下
 
 ```
 [global]
-index-url = <https://pypi.tuna.tsinghua.edu.cn/simple>
+index-url = https://pypi.tuna.tsinghua.edu.cn/simple
 ```
 
 # 第一步：注册一个PyPi帐号
@@ -87,7 +87,7 @@ setup(
 	description = "time and path tool",
 	long_description = "time and path tool",
 	license = "MIT Licence",
-	url = "<https://github.com/fengmm521/pipProject>",
+	url = "https://github.com/fengmm521/pipProject",
 	author = "mage",
 	author_email = "mage@woodcol.com",
 	packages = find_packages(),
