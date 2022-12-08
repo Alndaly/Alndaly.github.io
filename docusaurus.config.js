@@ -123,29 +123,6 @@ const config = {
 	themeConfig:
 		/** @type {import('@docusaurus/preset-classic').ThemeConfig} */
 		({
-			// algolia: {
-			// 	// The application ID provided by Algolia
-			// 	appId: '2HQC3PTDZ8',
-
-			// 	// Public API key: it is safe to commit it
-			// 	apiKey: 'dc070f617070cfef49bb1c58359522b4',
-
-			// 	indexName: 'kinda',
-
-			// 	// Optional: see doc section below
-			// 	contextualSearch: true,
-
-			// 	// Optional: Specify domains where the navigation should occur through window.location instead on history.push. Useful when our Algolia config crawls multiple documentation sites and we want to navigate with window.location.href to them.
-			// 	externalUrlRegex: 'external\\.com|domain\\.com',
-
-			// 	// Optional: Algolia search parameters
-			// 	searchParameters: {},
-
-			// 	// Optional: path for search page that enabled by default (`false` to disable it)
-			// 	searchPagePath: 'search',
-
-			// 	//... other Algolia params
-			// },
 			liveCodeBlock: {
 				/**
 				 * The position of the live playground, above or under the editor
@@ -211,7 +188,7 @@ const config = {
 						label: '旅游',
 						position: 'left',
 					},
-					// { to: '/blog', label: '博客', position: 'left' },
+					{ to: '/blog', label: '博客', position: 'left' },
 					{
 						href: 'https://github.com/alndaly/alndaly.github.io/tree/docusaurus',
 						label: 'GitHub',

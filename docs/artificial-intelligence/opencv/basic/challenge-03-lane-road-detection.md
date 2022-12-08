@@ -154,7 +154,7 @@ def draw_lines(img, lines, color=[0, 0, 255], thickness=1):
 **第一步、根据斜率正负划分某条线是左车道还是右车道。**
 
 $$
-斜率=\frac{y_2-y_1}{x_2-x_1}(\leq0:左，>0:右)
+k=\frac{y_2-y_1}{x_2-x_1}(\leq0:左，>0:右)
 $$
 
 :::tip
