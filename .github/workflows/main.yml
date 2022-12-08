@@ -6,9 +6,9 @@ name: deploy_website
 on:
   # Triggers the workflow on push or pull request events but only for the "docusaurus" branch
   push:
-    branches: [ "docusaurus" ]
+    branches: [ "master" ]
   pull_request:
-    branches: [ "docusaurus" ]
+    branches: [ "master" ]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -48,3 +48,12 @@ jobs:
           REMOTE_HOST: ${{ secrets.REMOTE_HOST }}    #阿里云的 ip
           REMOTE_USER: ${{ secrets.REMOTE_USER }}    #阿里云用户
           TARGET: ${{ secrets.REMOTE_LOCATION }}       #被部署的服务器路径 
+
+      # Deploy website to github pages
+      - name: Deploy to github pages
+        uses: JamesIves/github-pages-deploy-action@releases/v3
+        with:
+          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+          BRANCH: gh-pages
+          FOLDER: build
+
