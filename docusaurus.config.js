@@ -167,51 +167,51 @@ const config = {
 				// },
 				items: [
 					{
-						to: '/docs/前端/',
+						to: '/docs/frontend/',
 						label: '前端',
 						position: 'left',
 					},
 					{
-						to: '/docs/摄影/',
+						to: '/docs/photograph/',
 						label: '摄影',
 						position: 'left',
 					},
 					{
-						to: '/docs/金融/',
+						to: '/docs/finance/',
 						label: '金融',
 						position: 'left',
 					},
 					{
-						to: '/docs/服务端/',
+						to: '/docs/backend/',
 						label: '服务端',
 						position: 'left',
 					},
 					{
-						to: '/docs/人工智能/',
+						to: '/docs/artificial-intelligence/',
 						label: '人工智能',
 						position: 'left',
 					},
 					{
-						to: '/docs/工具/',
+						to: '/docs/tools/',
 						label: '工具',
 						position: 'left',
 					},
 					{
-						to: '/docs/杂项/',
+						to: '/docs/others/',
 						label: '杂项',
 						position: 'left',
 					},
 					{
-						to: '/docs/心理/',
+						to: '/docs/psychology/',
 						label: '心理',
 						position: 'left',
 					},
 					{
-						to: '/docs/旅游/',
+						to: '/docs/travel/',
 						label: '旅游',
 						position: 'left',
 					},
-					{ to: '/blog', label: '博客', position: 'left' },
+					// { to: '/blog', label: '博客', position: 'left' },
 					{
 						href: 'https://github.com/alndaly/alndaly.github.io/tree/docusaurus',
 						label: 'GitHub',
