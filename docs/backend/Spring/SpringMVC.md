@@ -345,6 +345,50 @@ public String delete(@PathVariable("username") String username, @PathVariable("i
 
 ## 获取请求参数
 
+:::note
+简单来讲
+
+- 没有请求头用
+
+```java
+@RequestMapping("/test1")
+public String getParam1(String username, String password) {
+    System.out.println(username);
+    System.out.println(password);
+    return "success";
+}
+
+@RequestMapping("/test2")
+public String getParam2(@RequestParam(value = "user", required = true) String username,
+                        @RequestParam(value = "pwd", required = true) String password) {
+    System.out.println(username);
+    System.out.println(password);
+    return "success";
+}
+```
+
+- `application/json`请求头用
+
+```java
+@GetMapping("/event/getEvent")
+public Event getEventByEventId(@RequestBody Map<String, Object> params){
+    Integer eventId = (Integer) params.get("id");
+    Event event = eventService.getEventByID(eventId);
+    return event;
+}
+```
+
+- `application/x-www-form-urlencoded`请求头用
+
+```java
+@PostMapping("/test2")
+public String getParam2(@RequestParam Map<String, Object> map) {
+    System.out.println(map);
+    return "success";
+}
+```
+:::
+
 ### ServletAPI 获取（不推荐）
 
 ```java
@@ -423,11 +467,11 @@ public String getParamByPojo(User user) {
 
 ### 封装成Map
 
-`GET`/`POST` 均可，需要加上`@RequestParam`注解
+`GET`/`POST` 均可，根据请求头的不同需要加上`@RequestBody`或者`@RequestParam`注解
 
 ```java
 @RequestMapping(value = "/queryActivityByConditionForPage")
-public @ResponseBody PageInfo<Activity> queryActivityByConditionForPage(@RequestParam Map<String, Object> condition) {
+public @ResponseBody PageInfo<Activity> queryActivityByConditionForPage(@RequestBody Map<String, Object> condition) {
     if(null == condition.get("pageNo"))
         condition.put("pageNo", 1);
     if(null == condition.get("pageSize"))
