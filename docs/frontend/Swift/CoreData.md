@@ -72,6 +72,23 @@ struct notifyApp: App {
 @FetchRequest(entity: Notify.entity(),sortDescriptors: []) var notifies: FetchedResults<Notify>
 ```
 
+保存数据
+
+```swift
+let notify = Notify(context: moc)
+notify.title = "demo Title"
+notify.id = UUID()
+try? moc.save()
+```
+
+删除数据
+
+```swift
+offset = 1
+let notify = notifies[offset]
+moc.delete(notify)
+```
+
 ## 一些报错
 
 ```
