@@ -7,7 +7,11 @@ export default function FooterCopyright({ copyright }) {
 		docusaurusContext.siteConfig.customFields.benAnFields;
 	useEffect(() => {
 		setCopyRightHtml((prevCopyRight) => {
-			const newCopyRight = `${prevCopyRight} <a href="https://beian.miit.gov.cn/" target="_blank">${beiAnId}</a> <img src="${policeImg}"/> <a href='http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=${recordCode}' target='_blank'>${wangAnId}</a>`;
+			let newCopyRight = prevCopyRight
+			let host = window.location.host;
+			if (host === 'kinda.info') {
+				newCopyRight = `${prevCopyRight} <a href="https://beian.miit.gov.cn/" target="_blank">${beiAnId}</a> <img src="${policeImg}"/> <a href='http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=${recordCode}' target='_blank'>${wangAnId}</a>`;
+			}
 			return newCopyRight;
 		});
 	}, [copyright]);
