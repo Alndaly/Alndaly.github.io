@@ -277,3 +277,15 @@ curl -O https://www.example.com/foo/bar.html
 ```shell
 curl --limit-rate 200k https://google.com
 ```
+
+### Basic Auth
+
+- `--username`
+- `-u`
+
+#### 范例
+
+```shell
+curl --user username:password https://example.com
+curl -u username:password https://example.com
+```
