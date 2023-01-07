@@ -35,3 +35,21 @@ class MyLogger(object):
 :::note
 `from logging.handlers import QueueHandler`这一行是为了引入`logging.handlers`，避免下文中的`logging.handlers.RotatingFileHandler`报错。
 :::
+
+## 获取当前文件绝对路径
+
+```python
+from pathlib import Path
+import os
+
+BASE_DIR = Path(__file__).resolve()
+```
+
+## 获取父级的父级的目录文件绝对路径
+
+```python
+from pathlib import Path
+import os
+
+BASE_DIR = Path(__file__).resolve().parent.parent
+```
