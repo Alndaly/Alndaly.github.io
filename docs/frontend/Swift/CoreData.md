@@ -2,11 +2,11 @@
 
 1. 新建Model
 
-![](https://upload.kinda.info/image/202212201449843.png)
+![](https://oss.kinda.info/image/202212201449843.png)
 
 2. 设置Model
 
-![](https://upload.kinda.info/image/202212201450214.png)
+![](https://oss.kinda.info/image/202212201450214.png)
 
 3. 新建DataController
 

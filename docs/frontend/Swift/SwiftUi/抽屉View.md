@@ -31,7 +31,7 @@ struct OriginView_Previews: PreviewProvider {
 
 ```
 
-![](https://upload.kinda.info/image/202212131517510.png)
+![](https://oss.kinda.info/image/202212131517510.png)
 
-![](https://upload.kinda.info/image/202212131517124.png)
+![](https://oss.kinda.info/image/202212131517124.png)
 

@@ -1372,15 +1372,15 @@ Emp getDeptAndEmpdsStepTwo(@Param("empId") Integer empId);
 
 - Project的jdk版本
   
-    ![截屏2022-11-12 15.19.53.png](https://upload.kinda.info/image/202211161727823.png)
+    ![截屏2022-11-12 15.19.53.png](https://oss.kinda.info/image/202211161727823.png)
     
 - Module的jdk版本
   
-    ![截屏2022-11-12 15.19.25.png](https://upload.kinda.info/image/202211161727504.png)
+    ![截屏2022-11-12 15.19.25.png](https://oss.kinda.info/image/202211161727504.png)
     
 - Java Compiler的jdk版本
   
-    ![截屏2022-11-12 15.17.02.png](https://upload.kinda.info/image/202211161728671.png)
+    ![截屏2022-11-12 15.17.02.png](https://oss.kinda.info/image/202211161728671.png)
     
 
 ### 添加依赖和插件

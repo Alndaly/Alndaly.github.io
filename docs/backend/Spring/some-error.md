@@ -8,16 +8,16 @@ title: 一些报错
 
 ## Project的JDK
 
-![](https://upload.kinda.info/image/202211181531214.png)
+![](https://oss.kinda.info/image/202211181531214.png)
 
 ## Module的JDK
 
-![](https://upload.kinda.info/image/202211181533109.png)
+![](https://oss.kinda.info/image/202211181533109.png)
 
 ## Module的Language Level
 
-![](https://upload.kinda.info/image/202211181533004.png)
+![](https://oss.kinda.info/image/202211181533004.png)
 
 ## JAVA Compiler
 
-![](https://upload.kinda.info/image/202211181533521.png)
+![](https://oss.kinda.info/image/202211181533521.png)

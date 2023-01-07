@@ -211,15 +211,15 @@ public class HelloController {
 
 #### 启动配置`tomcat`
 
-![截屏2022-11-18 15.17.50.png](https://upload.kinda.info/image/202211241748273.png)
+![截屏2022-11-18 15.17.50.png](https://oss.kinda.info/image/202211241748273.png)
 
-![截屏2022-11-18 15.18.15.png](https://upload.kinda.info/image/202211241748118.png)
+![截屏2022-11-18 15.18.15.png](https://oss.kinda.info/image/202211241748118.png)
 
-![截屏2022-11-18 15.19.25.png](https://upload.kinda.info/image/202211241748115.png)
+![截屏2022-11-18 15.19.25.png](https://oss.kinda.info/image/202211241748115.png)
 
 #### 然后启动项目后即可看到效果
 
-![截屏2022-11-18 15.20.35.png](https://upload.kinda.info/image/202211241748000.png)
+![截屏2022-11-18 15.20.35.png](https://oss.kinda.info/image/202211241748000.png)
 
 ## `@RequestMapping`（重要）
 

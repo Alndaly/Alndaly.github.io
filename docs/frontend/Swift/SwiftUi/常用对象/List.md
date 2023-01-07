@@ -11,7 +11,7 @@ List{
 }
 ```
 
-![](https://upload.kinda.info/image/202212112113167.png)
+![](https://oss.kinda.info/image/202212112113167.png)
 
 ### 我们也可以在List中配合ForEach生成列表
 
@@ -29,7 +29,7 @@ List{
 }
 ```
 
-![](https://upload.kinda.info/image/202212112117372.png)
+![](https://oss.kinda.info/image/202212112117372.png)
 
 ### List配合Section可以形成分块的列表
 
@@ -53,7 +53,7 @@ List{
 }
 ```
 
-![](https://upload.kinda.info/image/202212112122292.png)
+![](https://oss.kinda.info/image/202212112122292.png)
 
 ### List结合对象数组
 
@@ -69,7 +69,7 @@ List(names, id: \.self){
 }
 ```
 
-![](https://upload.kinda.info/image/202212112128448.png)
+![](https://oss.kinda.info/image/202212112128448.png)
 
 #### 内层ForEach使用
 
@@ -87,7 +87,7 @@ List{
 }
 ```
 
-![](https://upload.kinda.info/image/202212112136247.png)
+![](https://oss.kinda.info/image/202212112136247.png)
 
 #### 修改外观样式触边
 
@@ -98,4 +98,4 @@ List(names, id: \.self){
 .listStyle(.grouped)
 ```
 
-![](https://upload.kinda.info/image/202212112133505.png)
+![](https://oss.kinda.info/image/202212112133505.png)

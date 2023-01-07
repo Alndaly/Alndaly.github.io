@@ -63,7 +63,7 @@ Sprint Framework是所有框架的基础，所有的Spring框架均是建立在S
 :::note
 ctrl+h可以打开继承了当前类的类的面板
 
-![截屏2022-11-13 12.25.29.png](https://upload.kinda.info/image/202211181720854.png)
+![截屏2022-11-13 12.25.29.png](https://oss.kinda.info/image/202211181720854.png)
 :::
 
 | 类型名 | 简介 |
@@ -412,7 +412,7 @@ jdbc.password=123456
 
 ### bean 的生命周期（重要）
 
-![bean%E7%9A%84%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F.png](https://upload.kinda.info/image/202211181720273.png)
+![bean%E7%9A%84%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F.png](https://oss.kinda.info/image/202211181720273.png)
 
 #### 实体类
 
@@ -727,7 +727,7 @@ public class UserController {
 理念：将非核心逻辑剥离出来以后，封装这些非核心逻辑的类、对象、方法。
 :::
 
-![image.png](https://upload.kinda.info/image/202211181721850.png)
+![image.png](https://oss.kinda.info/image/202211181721850.png)
 
 ### 静态代理
 
@@ -907,7 +907,7 @@ public class ProxyFactory {
 在`Spring`的配置文件中开启`aop`注解功能`<aop:aspectj-autoproxy />`
 :::
 
-![image.png](https://upload.kinda.info/image/202211181721633.png)
+![image.png](https://oss.kinda.info/image/202211181721633.png)
 
 `AspectJ`：本质上是静态代理, 将代理逻辑“织入”被代理的目标类编译得到的字节码文件，所以最终效果是动态。`weaver`就是织入器，`Spring`只是借用了`AspectJ`中的注解。
 
