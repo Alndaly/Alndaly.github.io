@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "artificial-intelligence/opencv/start/02-basic-element-image.md",
+                "file": "others/design-pattern/行为型模式.md",
                 "mode": "source",
                 "source": false
               }
@@ -48,7 +48,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "微信",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -65,7 +65,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -85,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "artificial-intelligence/opencv/start/02-basic-element-image.md",
+                "file": "others/design-pattern/行为型模式.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "artificial-intelligence/opencv/start/02-basic-element-image.md",
+                "file": "others/design-pattern/行为型模式.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "artificial-intelligence/opencv/start/02-basic-element-image.md"
+                "file": "others/design-pattern/行为型模式.md"
               }
             }
           }
@@ -138,6 +139,8 @@
   },
   "active": "713a47a9e7d09e3c",
   "lastOpenFiles": [
+    "others/intranet-penetration/frp.md",
+    "artificial-intelligence/opencv/start/02-basic-element-image.md",
     "artificial-intelligence/opencv/basic/11-edge-detection.md",
     "artificial-intelligence/data-analysis/model-tuning.md",
     "backend/Node/Koa/响应.md",
@@ -145,8 +148,6 @@
     "backend/Node/Koa/端口绑定.md",
     "backend/Spring/SpringFramework.md",
     "backend/Spring/some-error.md",
-    "backend/Spring/Mybatis-Generator.md",
-    "backend/Spring/Maven.md",
-    "backend/Spring/SpringCloud/注册中心.md"
+    "backend/Spring/Mybatis-Generator.md"
   ]
 }
