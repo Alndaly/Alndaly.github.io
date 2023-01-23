@@ -169,6 +169,11 @@ const config = {
 						position: 'left',
 					},
 					{
+						to: '/docs/color-modulation/',
+						label: '色彩',
+						position: 'left',
+					},
+					{
 						to: '/docs/tools/',
 						label: '工具',
 						position: 'left',
