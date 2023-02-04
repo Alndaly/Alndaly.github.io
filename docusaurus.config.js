@@ -103,7 +103,7 @@ const config = {
 					// Please change this to your repo.
 					// Remove this to remove the "edit this page" links.
 					editUrl:
-						'https://github.com/alndaly/alndaly.github.io/edit/docusaurus',
+						'https://github.com/alndaly/alndaly.github.io/edit/master',
 					showLastUpdateTime: true,
 				},
 				blog: {
@@ -111,7 +111,7 @@ const config = {
 					// Please change this to your repo.
 					// Remove this to remove the "edit this page" links.
 					editUrl:
-						'https://github.com/alndaly/alndaly.github.io/edit/docusaurus',
+						'https://github.com/alndaly/alndaly.github.io/edit/master',
 				},
 				theme: {
 					customCss: require.resolve('./src/css/custom.scss'),
@@ -200,7 +200,7 @@ const config = {
 					},
 					{ to: '/blog', label: '博客', position: 'left' },
 					{
-						href: 'https://github.com/alndaly/alndaly.github.io/tree/docusaurus',
+						href: 'https://github.com/alndaly/alndaly.github.io/tree/master',
 						label: 'GitHub',
 						position: 'right',
 					},
@@ -218,7 +218,7 @@ const config = {
 							},
 							{
 								label: 'GitHub',
-								href: 'https://github.com/alndaly/alndaly.github.io/tree/docusaurus',
+								href: 'https://github.com/alndaly/alndaly.github.io/tree/master',
 							},
 						],
 					},
