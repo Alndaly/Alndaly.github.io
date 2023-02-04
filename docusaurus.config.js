@@ -154,6 +154,11 @@ const config = {
 						position: 'left',
 					},
 					{
+						to: '/docs/health/',
+						label: '健康',
+						position: 'left',
+					},
+					{
 						to: '/docs/finance/',
 						label: '金融',
 						position: 'left',
