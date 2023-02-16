@@ -24,17 +24,24 @@ description: supervisor+frp+nginx搭建HTTP/HTTPS内网穿透服务
 
 ```ini
 [common]
-;tcp信号传输端口
+; 开放的tcp信号传输端口
 bind_port = 7000
-;接收http服务的端口
-vhost_http_port = 8006
-;用来验证是自己的信号的token
+; 接收http服务的端口
+vhost_http_port = 8091
+; 用来验证是自己的信号的token
 auth_token = token
 
-;服务类型
-type = http
-;你的服务器地址，此处由于做了nginx转发，且转发到的是127.0.0.1，所以这里就写127.0.0.1
-custom_domains = 127.0.0.1
+# frp管理后台端口，请按自己需求更改
+dashboard_port = 7500
+# frp管理后台用户名和密码，请改成自己的
+dashboard_user = admin
+dashboard_pwd = password1
+enable_prometheus = true
+
+# frp日志配置
+log_file = /var/log/frps.log
+log_level = info
+log_max_days = 3
 ```
 
 ### supervisor配置
@@ -136,11 +143,11 @@ http {
 
 ```ini
 [common]
-;你的远程服务器ip地址
+; 你的远程服务器ip地址
 server_addr = 43.231.52.81
-;不要动，这是固定tcp端口号
+; 远程的服务器开放信号端口
 server_port = 7000
-;用来验证是你的服务器的token，和服务器上的保持一致
+; 用来验证是你的服务器的token，和服务器上的保持一致
 auth_token = token	
 
 [web]
