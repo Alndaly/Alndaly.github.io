@@ -160,6 +160,7 @@ maven的项目根目录会有一个pom.xml
 
 - `project`是所有`pom.xml`的根元素，它还声明了一些POM相关的命名空间及xsd元素。
   - `modelVersion`指定了当前的POM模型的版本，对于Maven3来说，它只能是4.0.0 。
+  - `packaging`指定打包方式，springboot用`jar`，现在很少用`war`了，如果是聚合项目，那么主`pom.xml`文件中此项应该配置为`pom`。
   - `groupId`, `artifactId`和`version`了。这三个元素定义了一个项目基本的坐标，在Maven的世界，任何的jar、pom或者jar都是以基于这些基本的坐标进行区分的。
     - `groupId`定义了项目属于哪个组，随意命名，比如谷歌公司的myapp项目，就取名为 com.google.myapp。
     - `artifactId`定义了当前Maven项目在组中唯一的ID,比如定义hello-world。
@@ -171,6 +172,21 @@ maven的项目根目录会有一个pom.xml
     - `scope`依赖的范围。
     - `optional`标记依赖是否可选。
     - `exclusions`用来排除传递性依赖。
+
+## 聚合类maven项目
+
+注意聚合类项目需要配置各个分包和主包。
+
+```
+<modules>
+    <module>module1</module>
+    <module>module2</module>
+    <module>module3</module>
+    <module>main-module</module>
+</modules>
+
+<packaging>pom</packaging>
+```
 
 ## 归类依赖
 
