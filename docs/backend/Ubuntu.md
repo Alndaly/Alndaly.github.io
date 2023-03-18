@@ -83,19 +83,35 @@ mkdir processed
 
 ```shell
 #!/bin/bash
+# directory of app
+appDir=/app/chat
+# the name of file
+#fileName=find $appDir -name *.jar
+#log
+log=/app/chat/watch.log
+#file type
+fileType="jar"
 
-TARGET=~/incoming/
-PROCESSED=~/processed/
-
-inotifywait -m -e create -e moved_to --format "%f" $TARGET \
-        | while read FILENAME
-                do
-                        echo Detected $FILENAME, moving and zipping
-                        mv "$TARGET/$FILENAME" "$PROCESSED/$FILENAME"
-                        gzip "$PROCESSED/$FILENAME"
-                done
+/usr/bin/inotifywait -mr --timefmt '%d/%m/%y %H:%M' --format '%T %w %f' -e close_write $appDir/ | while read DATE TIME DIR FILE; do
+ 
+FILECHANGE=${DIR}${FILE}
+ 
+if [[ $FILECHANGE =~ $fileType ]]
+then
+        echo "At ${TIME} on ${DATE}, file $FILECHANGE was changed." >> $log
+        $appDir/application.sh restart
+fi
+done
 ```
 
 `-m`选项表示无限期的监控和更改。
+`-r`选项表示递归监测。
+
+```log title=watch.log
+At 14:47 on 18/01/21, file /app/chat/chat-0.0.1-SNAPSHOT.jar was changed.
+At 15:17 on 18/01/21, file /app/chat/chat-0.0.1-SNAPSHOT.jar was changed.
+At 15:43 on 18/01/21, file /app/chat/chat-0.0.1-SNAPSHOT.jar was changed.
+...
+```
 
 每次监测到新建或者移动事件后，都会将文件名称传入while循环中的FILENAME，接着执行do中的操作。
