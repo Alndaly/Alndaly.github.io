@@ -177,7 +177,7 @@ maven的项目根目录会有一个pom.xml
 
 注意聚合类项目需要配置各个分包和主包。
 
-```
+```xml
 <modules>
     <module>module1</module>
     <module>module2</module>
@@ -251,6 +251,10 @@ maven的项目根目录会有一个pom.xml
 - `<mirrorOf>external:*<mirrorOf>` 匹配所有远程仓库，使用localhost的除外，使用file://协议的除外。也就是说，匹配所有不在本机上的远程仓库。
 - `<mirrorOf>repo1,repo2<mirrorOf>` 匹配仓库repo1h和repo2，使用逗号分隔多个远程仓库。
 - `<mirrorOf>*,!repo1<mirrorOf>` 匹配所有远程仓库，repo1除外，使用感叹号将仓库从匹配中排除。
+
+### 自己上传到中央仓库（Github Packages）
+
+暂略
 
 ### 仓库服务搜索
 
