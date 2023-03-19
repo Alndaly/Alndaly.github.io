@@ -11,15 +11,12 @@ import styles from './index.module.css';
 
 function HomepageHeader() {
   const onGetYiYan = async () => {
-    const [res, err] = await to(getYiYan())
-    if (res) {
-      var options = {
-        strings: [res.data.content],
-        typeSpeed: 50,
-        cursorChar: '_'
-      };
-      var typed = new Typed('.hero__subtitle', options);
-    }
+    const options = {
+      strings: ["不要把自己限制在某个范围，这世界的人已经很爱打分数了，为什么连你都要替自己打分数？"],
+      typeSpeed: 50,
+      cursorChar: '_'
+    };
+    var typed = new Typed('.hero__subtitle', options);
   }
   useEffect(() => {
     onGetYiYan()
