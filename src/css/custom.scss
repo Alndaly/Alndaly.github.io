@@ -98,6 +98,7 @@
 
 .hero {
 	background: url("https://upload.sunrise-luckyda.top/image/202303152145318.JPG") no-repeat center center;
+	background-attachment: fixed;
 	height: 100vh;
 	background-size: cover;
 	&::after {
@@ -106,7 +107,8 @@
 		content: "";
 		width: 100%;
 		height: 100%;
-		background-color: rgba(0, 0, 0, 0.3);
+		backdrop-filter: blur(10px);
+		background-color: rgba(0, 0, 0, 0.2);
 	}
 	& > .container {
 		z-index: 2;

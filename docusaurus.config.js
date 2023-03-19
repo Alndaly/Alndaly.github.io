@@ -9,17 +9,17 @@ const katex = require('rehype-katex');
 /** @type {import('@docusaurus/types').Config} */
 const config = {
 	scripts: [
-		{
-			src: './js/click.js',
-			defer: true,
-		},
+		// {
+		// 	src: './js/click.js',
+		// 	defer: true,
+		// },
 		{
 			src: './js/google.js',
 		},
-		{
-			src: 'https://fastly.jsdelivr.net/gh/stevenjoezhang/live2d-widget@latest/autoload.js',
-			defer: true,
-		},
+		// {
+		// 	src: 'https://fastly.jsdelivr.net/gh/stevenjoezhang/live2d-widget@latest/autoload.js',
+		// 	defer: true,
+		// },
 		{
 			src: 'https://www.googletagmanager.com/gtag/js?id=G-YREYFCFRSF',
 			async: true
