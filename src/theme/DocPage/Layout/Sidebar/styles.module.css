@@ -10,14 +10,17 @@
 @media (min-width: 997px) {
   .docSidebarContainer {
     display: block;
-    /* height: 100%; */
     width: var(--doc-sidebar-width);
-    /* margin-top: calc(-1 * var(--ifm-navbar-height)); */
-    border-right: 1px solid var(--ifm-toc-border-color);
+    /*margin-top: calc(-1 * var(--ifm-navbar-height));
+    */border-right: 1px solid var(--ifm-toc-border-color);
     will-change: width;
     transition: width var(--ifm-transition-fast) ease;
     clip-path: inset(0);
-  }
+    -webkit-transition: width var(--ifm-transition-fast) ease;
+    -moz-transition: width var(--ifm-transition-fast) ease;
+    -ms-transition: width var(--ifm-transition-fast) ease;
+    -o-transition: width var(--ifm-transition-fast) ease;
+}
 
   .docSidebarContainerHidden {
     width: var(--doc-sidebar-hidden-width);
