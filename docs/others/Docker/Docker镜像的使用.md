@@ -54,10 +54,10 @@ docker run -t -i ubuntu:15.10 /bin/bash
 docker commit -m="has update" -a="runoob" e218edb10161 runoob/ubuntu:v2
 ```
 
-- m: 提交的描述信息
-- a: 指定镜像作者
-- e218edb10161：容器 ID
-- runoob/ubuntu:v2: 指定要创建的目标镜像名
+- `m`: 提交的描述信息
+- `a`: 指定镜像作者
+- `e218edb10161`：容器 ID
+- `runoob/ubuntu:v2`: 指定要创建的目标镜像名
 
 ### 构建镜像
 
@@ -67,8 +67,8 @@ docker commit -m="has update" -a="runoob" e218edb10161 runoob/ubuntu:v2
 docker build -t runoob/centos:6.7 .
 ```
 
-- t ：指定要创建的目标镜像名
-- . ：Dockerfile 文件所在目录，可以指定Dockerfile 的绝对路径
+- `t`：指定要创建的目标镜像名
+- `.`：Dockerfile 文件所在目录，可以指定Dockerfile 的绝对路径
 
 ## 设置镜像标签
 
