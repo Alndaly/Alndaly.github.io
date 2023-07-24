@@ -198,7 +198,12 @@ const config = {
 						label: '旅游',
 						position: 'left',
 					},
-					{ to: '/blog', label: '博客', position: 'left' },
+					{ to: '/blog', label: '博客', position: 'right' },
+					{
+						href: 'https://tools.kinda.info',
+						label: '工具箱',
+						position: 'right',
+					},
 					{
 						href: 'https://github.com/alndaly/alndaly.github.io/tree/master',
 						label: 'GitHub',
