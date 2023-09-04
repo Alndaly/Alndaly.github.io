@@ -44,7 +44,7 @@ mkdir incoming
 inotifywatch -v incoming 
 ```
 
-![](https://upload.sunrise-luckyda.top/image/202303182021568.webp)
+![](https://oss.weixiao.zuowu.cc/image/202303182021568.webp)
 
 3. 新建一个终端窗口
 
@@ -55,7 +55,7 @@ touch newfile
 
 4. 回到原来的终端窗口
 
-![](https://upload.sunrise-luckyda.top/image/202303182021104.webp)
+![](https://oss.weixiao.zuowu.cc/image/202303182021104.webp)
 
 可以看到有很多事件被记录了
 
