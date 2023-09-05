@@ -205,6 +205,11 @@ const config = {
 						position: 'right',
 					},
 					{
+						href: 'https://docs.zuowu.cc',
+						label: '微校WeSmile',
+						position: 'right',
+					},
+					{
 						href: 'https://github.com/alndaly/alndaly.github.io/tree/master',
 						label: 'GitHub',
 						position: 'right',
@@ -224,6 +229,23 @@ const config = {
 							{
 								label: 'GitHub',
 								href: 'https://github.com/alndaly/alndaly.github.io/tree/master',
+							},
+						],
+					},
+					{
+						title: '项目列表',
+						items: [
+							{
+								label: '工具库',
+								href: 'https://tools.kinda.info',
+							},
+							{
+								label: '微校WeSmile高校社区',
+								href: 'https://docs.zuowu.cc',
+							},
+							{
+								label: '微校WeSmile高校社区管理台',
+								href: 'https://manage.kinda.info',
 							},
 						],
 					},
