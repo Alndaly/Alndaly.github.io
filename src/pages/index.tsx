@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { getYiYan } from '../services/home'
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import { to } from '../common'
+import Link from '@docusaurus/Link';
 import clsx from 'clsx';
 import Typed from 'typed.js';
 import Layout from '@theme/Layout';
@@ -48,9 +49,9 @@ export default function Home(): JSX.Element {
         title={`Hello from ${siteConfig.title}`}
         description="Description will go into a meta tag in <head />">
         <HomepageHeader />
-        {/* <main>
+        <main>
           <HomepageFeatures />
-        </main> */}
+        </main>
       </Layout>
     </div>
   );

@@ -1,11 +1,24 @@
 .features {
   display: flex;
+  flex-direction: column;
   align-items: center;
   padding: 2rem 0;
   width: 100%;
 }
 
-.featureSvg {
-  height: 200px;
+.featureImageBox{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.featureImage{
   width: 200px;
+  height: 200px;
+  self-item: center;
+}
+
+.title{
+  font-weight: bold;
+  font-size: 20px;
 }
