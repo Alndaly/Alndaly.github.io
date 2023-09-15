@@ -6,6 +6,7 @@ import Link from '@docusaurus/Link';
 import clsx from 'clsx';
 import Typed from 'typed.js';
 import Layout from '@theme/Layout';
+import { Analytics } from '@vercel/analytics/react';
 import HomepageFeatures from '@site/src/components/HomepageFeatures';
 
 import styles from './index.module.css';
@@ -51,6 +52,7 @@ export default function Home(): JSX.Element {
         <HomepageHeader />
         <main>
           <HomepageFeatures />
+          <Analytics />
         </main>
       </Layout>
     </div>
