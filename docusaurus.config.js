@@ -245,7 +245,7 @@ const config = {
 							},
 							{
 								label: '微校WeSmile高校社区管理台',
-								href: 'https://manage.kinda.info',
+								href: 'https://manage.weixiao.zuowu.cc',
 							},
 						],
 					},

@@ -28,7 +28,7 @@ const FeatureList: FeatureItem[] = [
   },
   {
     title: '微校WeSmile管理台',
-    path: 'https://manage.kinda.info',
+    path: 'https://manage.weixiao.zuowu.cc',
     image: 'https://oss.kinda.info/image/202309051652630.png',
     description: (
       <>
