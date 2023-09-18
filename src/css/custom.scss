@@ -4,15 +4,11 @@
  * work well for content-centric websites.
  */
 
-@font-face {
-	font-family: 'LXGWWenKaiGBScreen';
-	src: url('../../static/fonts/LXGWWenKaiGBScreen.ttf');
-}
 
 /* You can override the default Infima variables here. */
 :root {
 	// 字体设置
-	--ifm-font-family-base: LXGWWenKaiGBScreen;
+	// --ifm-font-family-base: LXGWWenKaiGBScreen;
 	--ifm-font-size-base: 17px;
 	--ifm-line-height-base: 1.65;
 	// --ifm-font-family-base: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif,
