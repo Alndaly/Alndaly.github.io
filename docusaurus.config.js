@@ -123,6 +123,9 @@ const config = {
 	themeConfig:
 		/** @type {import('@docusaurus/preset-classic').ThemeConfig} */
 		({
+			metadata: [
+				{name: 'baidu-site-verification', content: 'codeva-wDGrzQfHtQ'},
+			],
 			liveCodeBlock: {
 				/**
 				 * The position of the live playground, above or under the editor
