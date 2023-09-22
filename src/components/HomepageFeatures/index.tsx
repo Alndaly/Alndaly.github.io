@@ -42,16 +42,16 @@ const FeatureList: FeatureItem[] = [
     ),
   },
   {
-    title: '个人工具库',
-    path: 'https://tools.kinda.info',
+    title: 'UniAPI',
+    path: 'https://uniapi.top',
     image: 'https://oss.kinda.info/image/202309051655298.png',
     description: (
       <>
         <div>
-          一些自制和收集起来的工具集
+          接口库
         </div>
         <div>
-          基于vue3和fastapi构建
+          工具调用从未如此简单
         </div>
       </>
     ),

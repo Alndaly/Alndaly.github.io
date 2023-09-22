@@ -203,8 +203,8 @@ const config = {
 					},
 					{ to: '/blog', label: '博客', position: 'right' },
 					{
-						href: 'https://tools.kinda.info',
-						label: '工具箱',
+						href: 'https://uniapi.top',
+						label: 'UniAPI',
 						position: 'right',
 					},
 					{
@@ -239,8 +239,8 @@ const config = {
 						title: '项目列表',
 						items: [
 							{
-								label: '工具库',
-								href: 'https://tools.kinda.info',
+								label: 'UniAPI',
+								href: 'https://uniapi.top',
 							},
 							{
 								label: '微校WeSmile高校社区',
