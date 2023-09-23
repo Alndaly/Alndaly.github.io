@@ -16,6 +16,10 @@ const config = {
 		{
 			src: './js/google.js',
 		},
+		{
+			src: './js/baidu.js',
+			async: true
+		},
 		// {
 		// 	src: 'https://fastly.jsdelivr.net/gh/stevenjoezhang/live2d-widget@latest/autoload.js',
 		// 	defer: true,
@@ -123,9 +127,7 @@ const config = {
 	themeConfig:
 		/** @type {import('@docusaurus/preset-classic').ThemeConfig} */
 		({
-			metadata: [
-				{name: 'baidu-site-verification', content: 'codeva-wDGrzQfHtQ'},
-			],
+			metadata: [],
 			liveCodeBlock: {
 				/**
 				 * The position of the live playground, above or under the editor
