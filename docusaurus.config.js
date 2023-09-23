@@ -16,10 +16,10 @@ const config = {
 		{
 			src: './js/google.js',
 		},
-		{
-			src: './js/baidu.js',
-			async: true
-		},
+		// {
+		// 	src: './js/baidu.js',
+		// 	async: true
+		// },
 		// {
 		// 	src: 'https://fastly.jsdelivr.net/gh/stevenjoezhang/live2d-widget@latest/autoload.js',
 		// 	defer: true,
